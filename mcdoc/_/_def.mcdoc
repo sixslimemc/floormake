@@ -2,10 +2,17 @@
 use super::super::def::RecipeSpec
 use super::super::def::RecipeId
 use super::super::def::IngredientSpec
+use super::super::def::ConditionCommand
 type ItemId = #[id="item"] string
 
 struct VariableRegister {
     [string]: any
+}
+
+struct IngredientLookup {
+    self_index: int @ 0..,
+    self_condition?: ConditionCommand,
+    recipe: RecipeSpec,
 }
 dispatch minecraft:storage[floormake:_] to struct {
     /// top level
@@ -20,7 +27,10 @@ dispatch minecraft:storage[floormake:_] to struct {
     x: VariableRegister,
     // data
     data: struct PrivateData {
-        
+        ingredient_map: struct {
+            [#[id="item"] string]: [IngredientLookup]
+        },
+        dynamic_ingredients: [IngredientLookup]
     },
     // constants
     const: struct Constants {
