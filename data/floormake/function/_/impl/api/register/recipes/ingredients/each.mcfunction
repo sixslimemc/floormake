@@ -17,12 +17,10 @@ data modify storage floormake:_ v.register.entry.self_condition set from storage
 execute store result storage floormake:_ v.register.entry.self_index int 1 run scoreboard players get *register.ingredient_index _floormake
 
 # set id map if not dynamic:
-data modify storage floormake:_ x.macro set from storage floormake:_ v.register.this_recipe
-data modify storage floormake:_ x.macro.item_id set from storage floormake:_ v.register.this_ingredient.id
-execute if score *register.is_dynamic _floormake matches 0 run function floormake:_/impl/api/register/recipes/ingredients/set_id_map with storage floormake:_ x.macro
+execute if score *register.is_dynamic _floormake matches 0 run function floormake:_/impl/api/register/recipes/ingredients/set_id_map with storage floormake:_ v.register.this_ingredient
 
 # add to dynamic ingredients if dynamic:
-
+execute if score *register.is_dynamic _floormake matches 1 run data modify storage floormake:_ data.dynamic_ingredients append from storage floormake:_ v.register.entry
 
 data remove storage floormake:_ v.register.ingredients[-1]
 execute if data storage floormake:_ v.register.ingredients[0] run function floormake:_/impl/api/register/recipes/ingredients/each

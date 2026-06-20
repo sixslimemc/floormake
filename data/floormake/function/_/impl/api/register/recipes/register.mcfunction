@@ -5,7 +5,8 @@
 #--------------------
 
 # remove existing:
-function floormake:_/impl/api/register/recipes/remove_existing with storage floormake:_ v.register.this_recipe
+data modify storage floormake:_/in remove_recipe set from storage floormake:_ v.register.this_recipe
+function floormake:_/util/remove_recipe/main
 
 # each ingredient:
 data modify storage floormake:_ v.register.ingredients set from storage floormake:_ v.register.this_recipe.ingredients

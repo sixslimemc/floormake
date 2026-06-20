@@ -1,8 +1,0 @@
-# IMPL > floormake : api/register
-# recipes/remove_existing
-#--------------------
-# ./register
-#--------------------
-
-$data remove storage floormake:data recipes[{pack_id:"$(pack_id)", id:"$(id)"}]
-$data remove storage floormake:_ data.dynamic_ingredients[{recipe:{pack_id:"$(pack_id)", id:"$(id)"}}]
