@@ -7,7 +7,7 @@ struct RecipeSpec {
     pack_id: ::slimecore::mcdoc::def::PackId,
     id: RecipeId,
     radius: float @ 0..,
-    ingredients: [IngredientSpec] @ 1..,
+    ingredients: (#[canonical] [IngredientSpec] @ 1.. | [IngredientSpec]),
     result: ActionCommand,
     final_condition?: ConditionCommand,
 }

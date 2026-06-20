@@ -11,4 +11,8 @@ function floormake:_/util/remove_recipe/main
 # each ingredient:
 data modify storage floormake:_ v.register.ingredients set from storage floormake:_ v.register.this_recipe.ingredients
 execute store result score *register.ingredient_index _floormake if data storage floormake:_ v.register.ingredients[]
+
+# add to data:
+data modify storage floormake:data recipes append from storage floormake:_ v.register.this_recipe
+
 execute if data storage floormake:_ v.register.ingredients[0] run function floormake:_/impl/api/register/recipes/ingredients/each
