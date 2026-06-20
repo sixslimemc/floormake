@@ -1,4 +1,9 @@
 
+use super::super::def::RecipeSpec
+use super::super::def::RecipeId
+use super::super::def::IngredientSpec
+type ItemId = #[id="item"] string
+
 struct VariableRegister {
     [string]: any
 }

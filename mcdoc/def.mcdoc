@@ -2,13 +2,16 @@
 type RecipeId = string
 
 struct RecipeSpec {
+    pack_id: ::slimecore::mcdoc::def::PackId,
     id: RecipeId,
-    radius: float,
+    radius: float @ 0..,
     ingredients: [IngredientSpec],
     result: #[command] string,
 }
 
 struct IngredientSpec {
     id: #[id="item"] string,
+    count: int @ 1..,
+    is_consumed: boolean,
     condition?: #[command] string,
 }

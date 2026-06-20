@@ -1,4 +1,6 @@
 
-dispatch minecraft:storage[floormake:data] to struct Data {
+use super::def::RecipeSpec
 
+dispatch minecraft:storage[floormake:data] to struct Data {
+    recipes: [RecipeSpec]
 }
