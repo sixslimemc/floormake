@@ -1,8 +1,8 @@
 
 dispatch minecraft:storage[floormake:in] to struct In {
-
+    register: super::function::api::register::In,
 }
 
 dispatch minecraft:storage[floormake:out] to struct Out {
-
+    register: super::function::api::register::Out,
 }
