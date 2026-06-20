@@ -1,0 +1,4 @@
+
+dispatch minecraft:storage[floormake:data] to struct Data {
+
+}

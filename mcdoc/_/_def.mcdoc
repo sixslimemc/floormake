@@ -1,0 +1,30 @@
+
+struct VariableRegister {
+    [string]: any
+}
+dispatch minecraft:storage[floormake:_] to struct {
+    /// top level
+    t: VariableRegister,
+    /// impl
+    v: VariableRegister,
+    /// util
+    u: VariableRegister,
+    /// abstract
+    a: VariableRegister,
+    /// in-scope temp
+    x: VariableRegister,
+    // data
+    data: struct PrivateData {
+        
+    },
+    // constants
+    const: struct Constants {
+        
+    }
+}
+dispatch minecraft:storage[floormake:_/in] to struct {
+    [any]: any
+}
+dispatch minecraft:storage[floormake:_/out] to struct {
+    [any]: any
+}

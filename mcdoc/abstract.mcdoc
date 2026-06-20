@@ -1,0 +1,8 @@
+
+dispatch minecraft:storage[floormake:abstract/in] to struct AbstractIn {
+
+}
+
+dispatch minecraft:storage[floormake:abstract/out] to struct AbstractOut {
+
+}

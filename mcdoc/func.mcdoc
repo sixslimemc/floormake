@@ -1,0 +1,8 @@
+
+dispatch minecraft:storage[floormake:in] to struct In {
+
+}
+
+dispatch minecraft:storage[floormake:out] to struct Out {
+
+}
