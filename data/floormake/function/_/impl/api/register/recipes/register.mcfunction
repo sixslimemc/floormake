@@ -8,6 +8,9 @@
 data modify storage floormake:_/in remove_recipe set from storage floormake:_ v.register.this_recipe
 function floormake:_/util/remove_recipe/main
 
+# set *.recipe_index:
+execute store result score *register.recipe_index _floormake if data storage floormake:data recipes[]
+
 # each ingredient:
 data modify storage floormake:_ v.register.ingredients set from storage floormake:_ v.register.this_recipe.ingredients
 execute store result score *register.ingredient_index _floormake if data storage floormake:_ v.register.ingredients[]

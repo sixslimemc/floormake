@@ -9,5 +9,6 @@ data remove storage floormake:in register
 scoreboard players reset *register.is_valid _floormake
 scoreboard players reset *register.is_dynamic _floormake
 scoreboard players reset *register.ingredient_index _floormake
+scoreboard players reset *register.recipe_index _floormake
 
 return run scoreboard players get *x _floormake

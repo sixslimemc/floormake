@@ -10,9 +10,9 @@ struct VariableRegister {
 }
 
 struct IngredientLookup {
-    self_index: int @ 0..,
+    ingredient_index: int @ 0..,
     self_condition?: ConditionCommand,
-    recipe: RecipeSpec,
+    recipe_index: int @ 0..,
 }
 dispatch minecraft:storage[floormake:_] to struct {
     /// top level
