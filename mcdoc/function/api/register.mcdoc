@@ -1,0 +1,12 @@
+use super::super::super::def::RecipeSpec
+
+struct In {
+    source: ::slimecore::mcdoc::def::PackId,
+    recipes: [RecipeSpec],
+}
+
+struct Out {
+
+}
+
+type Return = 1

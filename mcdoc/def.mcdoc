@@ -1,0 +1,14 @@
+
+type RecipeId = string
+
+struct RecipeSpec {
+    id: RecipeId,
+    radius: float,
+    ingredients: [IngredientSpec],
+    result: #[command] string,
+}
+
+struct IngredientSpec {
+    id: #[id="item"] string,
+    condition?: #[command] string,
+}
