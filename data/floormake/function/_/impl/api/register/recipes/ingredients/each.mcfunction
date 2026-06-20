@@ -11,9 +11,9 @@ data modify storage floormake:_ v.register.this_ingredient set from storage floo
 execute store success score *register.is_dynamic _floormake if data storage floormake:_ v.register.this_ingredient{id:false}
 
 # make entry:
-data modify storage floormake:_ v.register.entry set value {recipe_index:0, ingredient_index:0}
+data modify storage floormake:_ v.register.entry set value {recipe:{}, ingredient_index:0}
+data modify storage floormake:_ v.register.entry.recipe set from storage floormake:_ v.register.this_recipe
 data modify storage floormake:_ v.register.entry.self_condition set from storage floormake:_ v.register.this_ingredient.condition
-execute store result storage floormake:_ v.register.entry.recipe_index int 1 run scoreboard players get *register.recipe_index _floormake
 execute store result storage floormake:_ v.register.entry.ingredient_index int 1 run scoreboard players get *register.ingredient_index _floormake
 
 # set id map if not dynamic:
