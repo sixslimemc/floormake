@@ -8,7 +8,7 @@ data modify storage slimecore:in manifest.pack.author_id set value "sixslime"
 data modify storage slimecore:in manifest.pack.version set value {major:0, minor:1, patch:0}
 data modify storage slimecore:in manifest.pack.url set value "https://github.com/sixslimemc/floormake/releases/download/v0.1.0/sixslime.floormake.0.1.0.zip"
 
-data modify storage slimecore:in manifest.pack.display.name set value "TODO: NAME"
+data modify storage slimecore:in manifest.pack.display.name set value "FloorMake"
 data modify storage slimecore:in manifest.pack.display.summary set value "TODO: DESC"
 data modify storage slimecore:in manifest.pack.display.author_name set value "SixSlime"
 
@@ -30,8 +30,8 @@ data modify storage slimecore:in manifest.pack.abstract_implementations set valu
 # data modify storage slimecore:in manifest.pack.abstract_implementations append value {pack_ref:"PACK", id:"ID"}
 
 data modify storage slimecore:in manifest.pack.dependencies set value []
-# data modify storage slimecore:in manifest.pack.dependencies append value {pack_id:"DEPENDENCY", author_id:"sixslime", optional:false, version:{major:0, minor:1}, download:{url:"https://github.com/sixslimemc/DEPENDENCY/releases/download/v0.1.0/sixslime.DEPENDENCY.0.1.0.zip", version:{major:0, minor:1, patch:0}}}
+data modify storage slimecore:in manifest.pack.dependencies append value {pack_id:"six", author_id:"sixslime", optional:false, version:{major:0, minor:1}, download:{url:"https://github.com/sixslimemc/six/releases/download/v0.1.0/sixslime.six.0.1.0.zip", version:{major:0, minor:1, patch:0}}}
 
-data modify storage slimecore:in manifest.pack.is_library set value false
+data modify storage slimecore:in manifest.pack.is_library set value true
 
 function slimecore:api/manifest
