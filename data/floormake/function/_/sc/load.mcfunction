@@ -2,7 +2,7 @@
 # @ LOAD
 
 scoreboard objectives add _floormake dummy
-
+scoreboard objectives add floormake.ingredient_index dummy
 
 
 # DEBUG
