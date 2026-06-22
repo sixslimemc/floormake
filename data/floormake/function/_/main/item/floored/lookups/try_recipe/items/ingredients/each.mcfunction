@@ -1,11 +1,19 @@
-#> floormake:_/main/item/floored/lookups/try_recipe/ingredients/each
+#> floormake:_/main/item/floored/lookups/try_recipe/items/ingredients/each
 #--------------------
-# ../do
+# ../on
 #--------------------
 
 data modify storage floormake:_ t.floored.this_ingredient set from storage floormake:_ t.floored.ingredients[0]
 
+# setup item check and condition macro:
+execute if data storage floormake:_ t.floored.this_ingredient{id:false} run data modify storage floormake:_ x.macro.item_id set value "*"
+execute unless data storage floormake:_ t.floored.this_ingredient{id:false} run data modify storage floormake:_ x.macro.item_id set from storage floormake:_ t.floored.this_ingredient.id
+execute if data storage floormake:_ t.floored.this_ingredient.condition run data modify storage floormake:_ x.macro.condition set from storage floormake:_ t.floored.this_ingredient.condition
+execute unless data storage floormake:_ t.floored.this_ingredient.condition run data modify storage floormake:_ x.macro.condition set value "scoreboard players set *x _floormake 1"
 
+# match:
+execute store result score *x _floormake run function floormake:_/main/item/floored/lookups/try_recipe/items/ingredients/check_match with storage floormake:_ x.macro
+execute if score *x _floormake matches 1.. run function floormake:_/main/item/floored/lookups/try_recipe/items/ingredients/match
 
 scoreboard players add *floored.ingredient_index _floormake 1
 data remove storage floormake:_ t.floored.ingredients[0]
