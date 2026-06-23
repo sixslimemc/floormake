@@ -28,6 +28,4 @@ execute store result storage floormake:_ x.entry.items[0].contributing int 1 run
 data modify storage floormake:_ x.entry.items[0].guuid set from storage floormake:_ t.floored.item.guuid
 data modify storage floormake:_ t.floored.this_composition.list append from storage floormake:_ x.entry
 
-
-
 $data modify storage floormake:_ t.floored.compositions[$(ingredient_index)] set from storage floormake:_ t.floored.this_composition
