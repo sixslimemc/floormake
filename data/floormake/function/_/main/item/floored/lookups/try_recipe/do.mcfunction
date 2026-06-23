@@ -17,7 +17,7 @@ data modify storage floormake:_ t.floored.compositions set from storage six:out 
 
 data modify storage floormake:_ t.floored.item_map set value {}
 
-$execute as @e[type=item, distance=..$(radius), tag=!-, tag=!_] at @s run function floormake:_/main/item/floored/lookups/try_recipe/items/on
+$execute as @e[type=item, tag=!-, tag=!_, distance=..$(radius)] at @s run function floormake:_/main/item/floored/lookups/try_recipe/items/on
 
 # successful craft:
 return 1
