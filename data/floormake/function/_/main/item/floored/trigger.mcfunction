@@ -18,4 +18,6 @@ scoreboard players reset *floored.ingredient_index _floormake
 scoreboard players reset *floored.ingredient_matches _floormake
 scoreboard players reset *floored.item_count _floormake
 scoreboard players reset *floored.ingredients_length _floormake
+scoreboard players reset *floored.eval_index _floormake
+scoreboard players reset *floored.eval_success _floormake
 data remove storage floormake:_ t.floored
