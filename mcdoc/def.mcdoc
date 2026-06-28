@@ -9,7 +9,6 @@ struct RecipeSpec {
     radius: float @ 0..,
     ingredients: (#[canonical] [IngredientSpec] @ 1.. | [IngredientSpec]),
     result: ActionCommand,
-    final_condition?: ConditionCommand,
 }
 
 struct IngredientSpec {

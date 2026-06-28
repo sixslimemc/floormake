@@ -21,4 +21,7 @@ data modify storage floormake:_ t.floored.eval_counts append from storage floorm
 # populate {..eval_available}:
 execute if data storage floormake:_ t.floored.compositions[0] run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/init_available
 
+# populate {..eval_chosen}:
 function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/loop/loop
+
+return run scoreboard players get *floored.eval_success _floormake

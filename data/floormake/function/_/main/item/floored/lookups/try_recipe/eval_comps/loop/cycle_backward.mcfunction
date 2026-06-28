@@ -5,9 +5,10 @@
 # should only be called from ./cycle_current
 
 data remove storage floormake:_ t.floored.eval_chosen[-1]
-data modify storage floormake:_ t.floored.eval_available[0].list[].evaluated set value false
+data remove storage floormake:_ t.floored.eval_counts[-1]
 data modify storage floormake:_ t.floored.eval_available prepend from storage floormake:_ t.floored.eval_available[-1]
 data remove storage floormake:_ t.floored.eval_available[-1]
+data modify storage floormake:_ t.floored.eval_available[1].list[].evaluated set value false
 scoreboard players remove *floored.eval_index _floormake 1
 
 # loop if index still in range:

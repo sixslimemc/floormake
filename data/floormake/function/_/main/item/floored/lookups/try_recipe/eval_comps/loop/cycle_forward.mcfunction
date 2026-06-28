@@ -4,6 +4,7 @@
 #--------------------
 
 data modify storage floormake:_ t.floored.eval_chosen append from storage floormake:_ t.floored.this_chosen
+data modify storage floormake:_ t.floored.eval_counts append from storage floormake:_ t.floored.new_count
 data modify storage floormake:_ t.floored.eval_available append from storage floormake:_ t.floored.eval_available[0]
 data remove storage floormake:_ t.floored.eval_available[0]
 scoreboard players add *floored.eval_index _floormake 1
