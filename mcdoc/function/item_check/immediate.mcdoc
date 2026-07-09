@@ -1,0 +1,7 @@
+// execute as an item to immediately check if it can craft
+// ignores _ and - restrictions
+
+struct In {}
+struct Out {}
+
+type Return = 1
