@@ -4,7 +4,7 @@
 # ./each
 #--------------------
 
-data modify entity @s PickupDelay set value 2s
+data modify entity @s PickupDelay set value 100s
 data modify storage floormake:_ t.floored.root_data set from entity @s
 
 execute store result score *x _floormake run data get storage floormake:_ t.floored.root_data.Item.count
