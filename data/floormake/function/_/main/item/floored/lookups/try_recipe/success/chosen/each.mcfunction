@@ -10,6 +10,9 @@ data modify storage floormake:_ t.floored.this_chosen set from storage floormake
 data modify storage floormake:_ x set from storage floormake:_ t.floored.eval_ingredients[0]
 execute store success score *floored.consume_item _floormake if data storage floormake:_ x{is_consumed:true}
 
+# add {api -> on_catalyst.ingredient_items} entry:
+data modify storage floormake:api on_catalyst.ingredient_items append value []
+
 execute if data storage floormake:_ t.floored.this_chosen.items[0] run function floormake:_/main/item/floored/lookups/try_recipe/success/chosen/items/each
 
 scoreboard players add *floored.ingredient_index _floormake 1

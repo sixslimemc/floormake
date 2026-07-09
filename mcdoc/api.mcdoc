@@ -2,5 +2,11 @@
 
 use super::def::RecipeSpec
 dispatch minecraft:storage[floormake:api] to struct Api {
-    this_recipe: RecipeSpec
+    on_ingredients: struct {
+        this_recipe: RecipeSpec,
+    },
+    on_catalyst: struct {
+        this_recipe: RecipeSpec,
+        ingredient_items: [[::java::world::item::ItemStack]],
+    }
 }
