@@ -3,7 +3,7 @@
 #--------------------
 # ./do
 #--------------------
-execute if entity @s[tag=_floormake.consuming] run return run kill @s
+execute if entity @s[tag=_floormake.consuming] run return run function floormake:_/main/item/floored/lookups/try_recipe/success/consume
 tag @s remove floormake.ingredient
 tag @s remove floormake.was_split
 scoreboard players reset @s floormake.ingredient_index
