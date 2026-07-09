@@ -6,6 +6,9 @@
 data modify storage floormake:_ t.floored.this_recipe set from storage floormake:_ t.floored.this_lookup.recipe
 execute store result score *floored.ingredients_length _floormake if data storage floormake:_ t.floored.this_recipe.ingredients[]
 
+# DEBUG:
+tellraw @a ["TRY: ", {'storage':'floormake:_', 'nbt':'t.floored.this_recipe'}]
+
 # setup:
 # {..compositions} : {list:[{needs:int, items:[{contributing:int, guuid:Guuid}]}]}
 # {..item_map} : <Guuid> -> {count:int}

@@ -5,9 +5,6 @@
 
 data modify storage floormake:_ t.floored.this_lookup set from storage floormake:_ t.floored.lookups[-1]
 
-# DEBUG:
-tellraw @a ["LOOKUP: ", {'storage':'floormake:_', 'nbt':'t.floored.this_lookup'}]
-
 # run condition:
 execute store success score *floored.lookup_match _floormake unless data storage floormake:_ t.floored.this_lookup.self_condition
 execute if score *floored.lookup_match _floormake matches 0 run data modify storage floormake:_ x.mline.1 set from storage floormake:_ t.floored.this_lookup.self_condition
