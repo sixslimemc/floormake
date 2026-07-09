@@ -21,7 +21,7 @@ scoreboard players operation *y _floormake -= *x _floormake
 
 data modify storage floormake:_ x.entry set value {needs:0, items:[{guuid:"", contributing:0}]}
 execute store result storage floormake:_ x.entry.needs int 1 run scoreboard players get *y _floormake
-execute store result storage floormake:_ x.entry.items[0].contributing int 1 run scoreboard players get *y _floormake
+execute store result storage floormake:_ x.entry.items[0].contributing int 1 run scoreboard players get *x _floormake
 data modify storage floormake:_ x.entry.items[0].guuid set from storage floormake:_ t.floored.item.guuid
 data modify storage floormake:_ t.floored.this_composition.list append from storage floormake:_ x.entry
 
