@@ -6,9 +6,6 @@
 data modify storage floormake:_ t.floored.this_recipe set from storage floormake:_ t.floored.this_lookup.recipe
 execute store result score *floored.ingredients_length _floormake if data storage floormake:_ t.floored.this_recipe.ingredients[]
 
-# DEBUG:
-tellraw @a ["TRY: ", {'storage':'floormake:_', 'nbt':'t.floored.this_recipe.id'}]
-
 # setup:
 # {..compositions} : [{list:[{needs:int, items:[{contributing:int, guuid:Guuid}]}]}]
 # {..item_map} : <Guuid> -> {count:int}
@@ -22,9 +19,6 @@ data modify storage floormake:_ t.floored.compositions set from storage six:out 
 data modify storage floormake:_ t.floored.item_map set value {}
 
 $execute as @e[type=item, tag=!-, tag=!_, distance=..$(radius)] at @s run function floormake:_/main/item/floored/lookups/try_recipe/items/on
-
-# DEBUG:
-tellraw @a ["COMPOSITIONS: ", {'storage':'floormake:_', 'nbt':'t.floored.compositions'}]
 
 # early stop if trivially no possible combinations exist:
 execute store result score *x _floormake if data storage floormake:_ t.floored.compositions[{list:[{needs:0}]}]

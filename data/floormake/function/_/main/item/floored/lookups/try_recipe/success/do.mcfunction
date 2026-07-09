@@ -4,9 +4,6 @@
 # ../do
 #--------------------
 
-# DEBUG:
-say success!
-
 # for tracking is_consumed:
 data modify storage floormake:_ t.floored.eval_ingredients set from storage floormake:_ t.floored.this_recipe.ingredients
 
