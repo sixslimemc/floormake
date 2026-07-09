@@ -23,11 +23,14 @@ data modify storage floormake:_ t.floored.item_map set value {}
 
 $execute as @e[type=item, tag=!-, tag=!_, distance=..$(radius)] at @s run function floormake:_/main/item/floored/lookups/try_recipe/items/on
 
+# DEBUG:
+tellraw @a ["COMPOSITIONS: ", {'storage':'floormake:_', 'nbt':'t.floored.compositions'}]
+
 # early stop if trivially no possible combinations exist:
 execute store result score *x _floormake if data storage floormake:_ t.floored.compositions[{list:[{needs:0}]}]
 execute if score *x _floormake < *floored.ingredients_length _floormake run return 0
 
-return run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/do
+execute store result score *x _floormake run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/do
 execute if score *x _floormake matches 0 run return 0
 
 function floormake:_/main/item/floored/lookups/try_recipe/success/do
