@@ -5,8 +5,6 @@
 #--------------------
 tag @s remove _floormake.init
 
-
-
 data modify storage floormake:_ x.data set from storage floormake:_ t.floored.root_data
 data modify storage floormake:_ x.data.Item.count set from storage floormake:_ t.floored.this_entry.contributing
 data remove storage floormake:_ x.data.Tags
