@@ -4,7 +4,7 @@
 #--------------------
 
 # DEBUG:
-tellraw @a ["CHOOSE: ", {'storage':'floormake:_', 'nbt':'t.floored.this_chosen'}]
+tellraw @a "> CHOSEN"
 
 data modify storage floormake:_ t.floored.eval_chosen append from storage floormake:_ t.floored.this_chosen
 data modify storage floormake:_ t.floored.eval_counts append from storage floormake:_ t.floored.new_count
