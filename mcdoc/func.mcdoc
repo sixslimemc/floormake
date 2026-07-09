@@ -1,8 +1,12 @@
 
 dispatch minecraft:storage[floormake:in] to struct In {
     register: super::function::api::register::In,
+    flag: super::function::item_check::flag::In,
+    immediate: super::function::item_check::immediate::In,
 }
 
 dispatch minecraft:storage[floormake:out] to struct Out {
     register: super::function::api::register::Out,
+    flag: super::function::item_check::flag::Out,
+    immediate: super::function::item_check::immediate::Out,
 }
