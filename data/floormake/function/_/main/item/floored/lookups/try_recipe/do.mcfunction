@@ -10,7 +10,7 @@ execute store result score *floored.ingredients_length _floormake if data storag
 tellraw @a ["TRY: ", {'storage':'floormake:_', 'nbt':'t.floored.this_recipe.id'}]
 
 # setup:
-# {..compositions} : {list:[{needs:int, items:[{contributing:int, guuid:Guuid}]}]}
+# {..compositions} : [{list:[{needs:int, items:[{contributing:int, guuid:Guuid}]}]}]
 # {..item_map} : <Guuid> -> {count:int}
 #   used to keep track of remaining total as recipe evaluates.
 #   should be initialized on initial /on call.
