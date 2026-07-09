@@ -13,7 +13,7 @@ data modify storage floormake:_ t.floored.item set value {}
 data modify storage floormake:_ t.floored.item.data set from entity @s Item
 
 # get guuid:
-data modify storage six:in guuid.uuid set from storage floormake:_ t.floored.item_data.UUID
+data modify storage six:in guuid.uuid set from storage floormake:_ t.floored.item.data.UUID
 function six:uuid/guuid
 data modify storage floormake:_ t.floored.item.guuid set from storage six:out guuid.result
 
