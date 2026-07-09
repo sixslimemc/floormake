@@ -24,4 +24,7 @@ execute if data storage floormake:_ t.floored.compositions[0] run function floor
 # populate {..eval_chosen}:
 function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/loop/loop
 
+# DEBUG:
+tellraw @a ["CHOSEN: ", {'storage':'floormake:_', 'nbt':'t.floored.eval_chosen'}]
+
 return run scoreboard players get *floored.eval_success _floormake
