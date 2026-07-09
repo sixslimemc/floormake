@@ -12,7 +12,6 @@ data modify storage floormake:_ x.data.Item.count set from storage floormake:_ t
 data remove storage floormake:_ x.data.Tags
 data remove storage floormake:_ x.data.UUID
 data remove storage floormake:_ x.data.Thrower
-data modify storage floormake:_ x.data.PickupDelay set value 100s
 data modify entity @s {} merge from storage floormake:_ x.data
 
 # DEBUG:
