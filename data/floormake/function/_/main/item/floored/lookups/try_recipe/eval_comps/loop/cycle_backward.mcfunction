@@ -4,6 +4,8 @@
 #--------------------
 # should only be called from ./cycle_current
 
+data modify storage floormake:_ t.floored.eval_available[0].list append from storage floormake:_ t.floored.this_chosen
+
 data remove storage floormake:_ t.floored.eval_chosen[-1]
 data remove storage floormake:_ t.floored.eval_counts[-1]
 data modify storage floormake:_ t.floored.eval_available prepend from storage floormake:_ t.floored.eval_available[-1]

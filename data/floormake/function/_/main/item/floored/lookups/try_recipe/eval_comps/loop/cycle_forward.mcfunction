@@ -6,6 +6,9 @@
 # DEBUG:
 tellraw @a "> CHOSEN"
 
+data modify storage floormake:_ t.floored.this_chosen.evaluated set value true
+data modify storage floormake:_ t.floored.eval_available[0].list prepend from storage floormake:_ t.floored.this_chosen
+
 data modify storage floormake:_ t.floored.eval_chosen append from storage floormake:_ t.floored.this_chosen
 data modify storage floormake:_ t.floored.eval_counts append from storage floormake:_ t.floored.new_count
 data modify storage floormake:_ t.floored.eval_available append from storage floormake:_ t.floored.eval_available[0]
