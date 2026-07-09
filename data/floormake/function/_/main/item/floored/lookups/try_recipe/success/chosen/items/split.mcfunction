@@ -15,8 +15,8 @@ data remove storage floormake:_ x.data.Thrower
 data modify storage floormake:_ x.data.PickupDelay set value 100s
 data modify entity @s {} merge from storage floormake:_ x.data
 
-#DEBUG
-say split
+# DEBUG:
+tellraw @a ["DATA: ", {'entity':'@s', 'nbt':'{}'}]
 
 tag @s add floormake.was_split
 
