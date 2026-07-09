@@ -24,8 +24,9 @@ $execute as @e[type=item, tag=!-, tag=!_, distance=..$(radius)] at @s run functi
 execute store result score *x _floormake if data storage floormake:_ t.floored.compositions[{list:[{needs:0}]}]
 execute if score *x _floormake < *floored.ingredients_length _floormake run return 0
 
-execute store result score *x _floormake run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/do
+return run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/do
 execute if score *x _floormake matches 0 run return 0
 
-# successful craft:
+function floormake:_/main/item/floored/lookups/try_recipe/success/do
+
 return 1

@@ -4,6 +4,9 @@
 scoreboard objectives add _floormake dummy
 scoreboard objectives add floormake.ingredient_index dummy
 
+# DECLARE TAGS:
+# .ingredient
+# .was_split
 
 # DEBUG
 scoreboard players reset *init _floormake
