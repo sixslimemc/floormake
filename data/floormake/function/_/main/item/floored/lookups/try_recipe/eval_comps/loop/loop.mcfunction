@@ -13,7 +13,7 @@ execute if data storage floormake:_ t.floored.this_chosen{evaluated:true} run re
 
 
 tellraw @a ["AVAILABLE: ", {'storage':'floormake:_', 'nbt':'t.floored.eval_available[0].list'}]
-tellraw @a ["CHOSING: ", {'storage':'floormake:_', 'nbt':'t.floored.this_chosen'}]
+tellraw @a ["TRYING: ", {'storage':'floormake:_', 'nbt':'t.floored.this_chosen'}]
 
 # try get new count:
 execute store result score *x _floormake run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/loop/get_new_count/do
