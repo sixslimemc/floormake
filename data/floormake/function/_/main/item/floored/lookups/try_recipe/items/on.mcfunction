@@ -14,7 +14,6 @@ data modify storage six:in guuid.uuid set from storage floormake:_ t.floored.ite
 function six:uuid/guuid
 data modify storage floormake:_ t.floored.item.guuid set from storage six:out guuid.result
 
-
 # each ingredient:
 execute store result score *floored.item_count _floormake run data get storage floormake:_ t.floored.item.data.Item.count
 scoreboard players set *floored.ingredient_matches _floormake 0

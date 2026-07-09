@@ -8,7 +8,12 @@ struct RecipeSpec {
     id: RecipeId,
     radius: float @ 0..,
     ingredients: (#[canonical] [IngredientSpec] @ 1.. | [IngredientSpec]),
-    result: ActionCommand,
+    result: struct RecipeResult {
+        // runs in order of ingredients array; arbitrary order within multiple items matching the same ingredient
+        on_ingredients?: ActionCommand,
+        // runs on the last floored item that triggered the craft
+        on_catalyst?: ActionCommand,
+    }
 }
 
 struct IngredientSpec {

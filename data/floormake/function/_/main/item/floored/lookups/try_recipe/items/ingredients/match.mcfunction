@@ -4,9 +4,6 @@
 #--------------------
 scoreboard players add *floored.ingredient_matches _floormake 1
 
-# LEFTOFF:
-# populate {..compositions[$(ingredient_index)].list} properly, taking into account the limit of this item's count and adding to existing entries that have 'needs' > 0
-
 $data modify storage floormake:_ t.floored.this_composition set from storage floormake:_ t.floored.compositions[$(ingredient_index)]
 
 # modify existing list (via full remake)
