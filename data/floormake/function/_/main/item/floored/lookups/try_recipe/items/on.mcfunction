@@ -12,6 +12,9 @@ data modify storage floormake:_ t.floored.item set value {}
 # get data:
 data modify storage floormake:_ t.floored.item.data set from entity @s Item
 
+# DEBUG:
+tellraw @a ["DATA: ", {'storage':'floormake:_', 'nbt':'t.floored.item.data'}]
+
 # get guuid:
 data modify storage six:in guuid.uuid set from storage floormake:_ t.floored.item.data.UUID
 function six:uuid/guuid
