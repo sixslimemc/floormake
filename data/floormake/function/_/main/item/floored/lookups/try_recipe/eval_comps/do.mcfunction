@@ -18,6 +18,9 @@ data modify storage floormake:_ t.floored.eval_available set value []
 data modify storage floormake:_ t.floored.eval_counts set value []
 data modify storage floormake:_ t.floored.eval_counts append from storage floormake:_ t.floored.item_map
 
+# DEBUG
+tellraw @a ["COMPS: ", {'storage':'floormake:_', 'nbt':'t.floored.compositions'}]
+
 # populate {..eval_available}:
 execute if data storage floormake:_ t.floored.compositions[0] run function floormake:_/main/item/floored/lookups/try_recipe/eval_comps/init_available
 
