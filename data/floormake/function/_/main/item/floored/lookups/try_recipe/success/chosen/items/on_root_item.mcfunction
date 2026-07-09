@@ -10,6 +10,8 @@ execute store result score *x _floormake run data get storage floormake:_ t.floo
 execute store result score *y _floormake run data get storage floormake:_ t.floored.this_entry.contributing
 scoreboard players operation *x _floormake -= *y _floormake
 
+data modify entity @s PickupDelay set value 2s
+
 # set ingredient directly if no split required:
 execute if score *x _floormake matches ..0 run return run function floormake:_/main/item/floored/lookups/try_recipe/success/chosen/items/set_ingredient
 
