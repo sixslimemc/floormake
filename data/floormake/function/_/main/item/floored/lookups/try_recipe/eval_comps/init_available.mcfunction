@@ -4,8 +4,8 @@
 #--------------------
 
 data modify storage floormake:_ t.floored.eval_available prepend value {list:[]}
-data modify storage floormake:_ t.floored.eval_available[0].list append from storage floormake:_ t.floored.compositions[-1].list[{needed:0}]
-data remove storage floormake:_ t.floored.eval_available[0].list[].needed
+data modify storage floormake:_ t.floored.eval_available[0].list append from storage floormake:_ t.floored.compositions[-1].list[{needs:0}]
+data remove storage floormake:_ t.floored.eval_available[0].list[].needs
 data modify storage floormake:_ t.floored.eval_available[0].list[].evaluated set value true
 
 data remove storage floormake:_ t.floored.compositions[-1]
