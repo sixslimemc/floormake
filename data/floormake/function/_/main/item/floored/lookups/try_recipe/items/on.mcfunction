@@ -4,6 +4,9 @@
 # ../do
 #--------------------
 
+# DEBUG:
+say recognized
+
 data modify storage floormake:_ t.floored.item set value {}
 
 # get data:
