@@ -1,0 +1,11 @@
+use super::super::super::def::RecipeReference
+
+struct In {
+    recipes: [RecipeReference],
+}
+
+struct Out {
+
+}
+
+type Return = 1

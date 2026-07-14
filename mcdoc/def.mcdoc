@@ -2,9 +2,10 @@
 type RecipeId = string
 type ConditionCommand = #[command] string
 type ActionCommand = #[command] string
+type PackId = ::slimecore::mcdoc::def::PackId
 
 struct RecipeSpec {
-    pack_id: ::slimecore::mcdoc::def::PackId,
+    pack_id: PackId,
     id: RecipeId,
     radius: float @ 0..,
     ingredients: (#[canonical] [IngredientSpec] @ 1.. | [IngredientSpec]),
@@ -14,6 +15,11 @@ struct RecipeSpec {
         // runs on the last floored item that triggered the craft
         on_catalyst?: ActionCommand,
     }
+}
+
+struct RecipeReference {
+    pack_id: PackId,
+    id: RecipeId,
 }
 
 struct IngredientSpec {
