@@ -8,9 +8,6 @@ scoreboard objectives add floormake.ingredient_index dummy
 # .ingredient
 # .was_split
 
-# DEBUG
-scoreboard players reset *init _floormake
-
 execute unless score *init _floormake matches 1 run function floormake:_/sc/init
 
 function floormake:_/main/wipe_registry
